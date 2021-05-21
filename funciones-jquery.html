@@ -101,10 +101,11 @@
         <div class="row p-5">
             <div class="col-3">
                 <button class="btn btn-primary" id="btn-val" onclick="val()">Val</button>
+                <button class="btn btn-danger" id="btn-text" onclick="text()">Text</button>
             </div>
             <div class="col text-center">
-                <h1>Funcion Val</h1>
-                <p>Insertamos un input</p>
+                <h1>Funcion Val y Text</h1>
+                <p id="p-6">Insertamos un input</p>
                 <input type="text">
             </div>
         </div>
@@ -160,9 +161,10 @@
         });
         $('#btn-val').on('click',function(){
             alert($('input').val())
-            
         });
-
+        $('#btn-text').on('click',function(){
+            alert($('#p-6').text())
+        });
     </script>
 </body>
 </html>
