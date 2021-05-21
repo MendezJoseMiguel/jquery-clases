@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <style>
         img{
-            height: 150px;
+            height: 80px;
             width: 230px;
         }
     </style>
@@ -19,23 +19,31 @@
     <div class="container">
         <h1>De Ninja a Gato</h1>
         <div class="row">
-            <div class="col">
-                <img src="ninja-cat/img/ninja0.png" data-alt-src="ninja-cat/img/cat0">
+            <div class="col-6 offset-3 mb-1">
+                <img src="ninja-cat/img/ninja0.png" data-alt-src="ninja-cat/img/cat0.png">
             </div>
-            <div class="col">
-                <img src="" alt="">
+            <div class="col-6 offset-3 mb-1">
+                <img src="ninja-cat/img/ninja1.png" data-alt-src="ninja-cat/img/cat1.png">
             </div>
-            <div class="col">
-                <img src="" alt="">
+            <div class="col-6 offset-3 mb-1">
+                <img src="ninja-cat/img/ninja2.png" data-alt-src="ninja-cat/img/cat2.png">
             </div>
-            <div class="col">
-                <img src="" alt="">
+            <div class="col-6 offset-3 mb-1">
+                <img src="ninja-cat/img/ninja3.png" data-alt-src="ninja-cat/img/cat3.png">
             </div>
-            <div class="col">
-                <img src="" alt="">
+            <div class="col-6 offset-3 mb-1">
+                <img src="ninja-cat/img/ninja4.png" data-alt-src="ninja-cat/img/cat4.png">
             </div>
         
         </div>
     </div>
+    <script>
+        $('img').on('click',function(){
+            const imggato = $(this).attr('data-alt-src');
+            const imgninja = $(this).attr('src');
+            $(this).attr('src',imggato);
+            $(this).attr('data-alt-src',imgninja);
+        })
+    </script>
 </body>
 </html>
