@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones jQuery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <style>
+      #p-show{
+          display: none;
+      }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row p-5">
+            <div class="col-3">
+                <button class="btn btn-success" id="btn-hide" onclick="hide()">Hide</button>
+                <button class="btn btn-primary" id="btn-show" onclick="show()">Show</button>
+                <button class="btn btn-warning" id="btn-toggle" onclick="toggle()">Toggle</button>
+            </div>
+            <div class="col text-center">
+                <h1>Funcion Hide, Show,Toggle</h1>
+                <p id="p-example">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet fugit voluptatem blanditiis repudiandae tempore, sunt placeat ad provident nemo obcaecati voluptates rerum id quidem laborum! Sint est facilis ut doloribus.</p>
+            </div>
+        </div>
+        <div class="row p-5">
+            <div class="col-3">
+                <button class="btn btn-success" id="btn-slideToggle" onclick="slideToggle()">SlideToggle</button>
+                <button class="btn btn-primary" id="btn-slideDown" onclick="slideDown()">SlideDown</button>
+                <button class="btn btn-warning mt-1" id="btn-slideUp" onclick="slideUp()">SlideUp</button>
+            </div>
+            <div class="col text-center">
+                <h1>Funcion slideDown slideUp slideToggle</h1>
+                <img id="logojquery" src="img/Jquery.png" alt="">
+                <p>Haz click en el boton para esconder o  aparecer la imagen</p>
+            </div>
+        </div>
+        <div class="row p-5">
+            <div class="col-3">
+                <button class="btn btn-success" id="btn-fadein" onclick="fadeIn()">FadeIn</button>
+                <button class="btn btn-primary" id="btn-fadeout" onclick="fadeOut()">FadeOut</button>
+            </div>
+            <div class="col text-center">
+                <h1>Funcion FadeIn,FadeOut</h1>
+                <p id="p-demo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet fugit voluptatem blanditiis repudiandae tempore, sunt placeat ad provident nemo obcaecati voluptates rerum id quidem laborum! Sint est facilis ut doloribus.</p>
+            </div>
+        </div>
+        <div class="row p-5">
+            <div class="col-3">
+                <button class="btn btn-primary" id="btn-addclass" onclick="addClass()">AddClass</button>
+                <button class="btn btn-success" id="btn-removeclass" onclick="removeClass()">RemoveClass</button>
+            </div>
+            <div class="col text-center">
+                <h1>Funcion AddClass, RemoveClass</h1>
+                <p id="p-red">Haz click en el boton para cambiar a rojo el paragrafo</p>
+            </div>
+        </div>
+        <div class="row p-5">
+            <div class="col-3">
+                <button class="btn btn-primary" id="btn-append" onclick="append()">Append</button>
+                <button class="btn btn-success" id="btn-prepend" onclick="prepend()">Prepend</button>
+            </div>
+            <div class="col text-center">
+                <h1>Funcion Append, Prepend</h1>
+                <p id="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, dolores beatae vero consequuntur in perferendis doloremque ratione facere debitis voluptates quisquam dolorem consectetur minima officiis aliquid! Rerum consequatur assumenda cupiditate.</p>
+            </div>
+        </div>
+        <div class="row p-5">
+            <div class="col-3">
+                <button class="btn btn-primary" id="btn-after" onclick="after()">After</button>
+                <button class="btn btn-success" id="btn-before" onclick="before()">Before</button>
+            </div>
+            <div class="col text-center">
+                <h1>Funcion After, Before</h1>
+                <p id="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, dolores beatae vero consequuntur in perferendis doloremque ratione facere debitis voluptates quisquam dolorem consectetur minima officiis aliquid! Rerum consequatur assumenda cupiditate.</p>
+            </div>
+        </div>
+        <div class="row p-5">
+            <div class="col-3">
+                <button class="btn btn-primary" id="btn-html" onclick="html()">Html</button>
+            </div>
+            <div class="col text-center">
+                <h1>Funcion Html</h1>
+                <p id="p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, dolores beatae vero consequuntur in perferendis doloremque ratione facere debitis voluptates quisquam dolorem consectetur minima officiis aliquid! Rerum consequatur assumenda cupiditate.</p>
+            </div>
+        </div>
+        <div class="row p-5">
+            <div class="col-3">
+                <button class="btn btn-primary" id="btn-attr" onclick="attr()">Attr</button>
+            </div>
+            <div class="col text-center">
+                <h1>Funcion Attr</h1>
+                <p>Insertamos imagen</p>
+                <img id="imgatributo" src="img/kisspng-web-development-jquery-ui-javascript-computer-icon-jqlogo-5ae94a5d3322d7.6814333115252383652095.jpg" alt="logo jquery" title="imagen de logo jquery">
+            </div>
+        </div>
+        <div class="row p-5">
+            <div class="col-3">
+                <button class="btn btn-primary" id="btn-val" onclick="val()">Val</button>
+            </div>
+            <div class="col text-center">
+                <h1>Funcion Val</h1>
+                <p>Insertamos un input</p>
+                <input type="text">
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#btn-hide').on('click',function(){
+            $('#p-example').hide()
+        });
+        $('#btn-show').on('click',function(){
+            $('#p-example').show()
+        });
+        $('#btn-toggle').on('click',function(){
+            $('#p-example').toggle()
+        });
+        $('#btn-slideToggle').on('click',function(){
+            $('#logojquery').slideToggle()
+        });
+        $('#btn-slideDown').on('click',function(){
+            $('#logojquery').slideDown()
+        });
+        $('#btn-slideUp').on('click',function(){
+            $('#logojquery').slideUp()
+        });
+        $('#btn-fadein').on('click',function(){
+            $('#p-demo').fadeIn()
+        });
+        $('#btn-fadeout').on('click',function(){
+            $('#p-demo').fadeOut()
+        });
+        $('#btn-addclass').on('click',function(){
+            $('#p-red').addClass('text-danger')
+        });
+        $('#btn-removeclass').on('click',function(){
+            $('#p-red').removeClass()
+        });
+        $('#btn-append').on('click',function(){
+            $('#p-2').append('<br>Esto va despues del parrafo')
+        });
+        $('#btn-prepend').on('click',function(){
+            $('#p-2').prepend('Esto va antes del parrafo<br>')
+        });
+        $('#btn-after').on('click',function(){
+            $('#p-3').after('<br>No entiendo la diferencia entre after y append')
+        });
+        $('#btn-before').on('click',function(){
+            $('#p-3').before('No entiendo la diferencia con entre before y prepend<br>')
+        });
+        $('#btn-html').on('click',function(){
+            $('#p-4').html('<p>Ya esta como larga la tarea</p>')
+        });
+        $('#btn-attr').on('click',function(){
+            $('#imgatributo').attr('src','https://scontent.fscl19-1.fna.fbcdn.net/v/t1.6435-9/39980184_679114819112512_4619824723755270144_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=6e5ad9&_nc_ohc=o6JLocAIwjAAX9w1dji&_nc_ht=scontent.fscl19-1.fna&oh=d96771f0e375eb065d61115f17b52254&oe=60CE2198')
+        });
+        $('#btn-val').on('click',function(){
+            alert($('input').val())
+            
+        });
+
+    </script>
+</body>
+</html>
